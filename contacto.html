@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatar Profissional</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="">Contratou!</a></div>
+            <input type="radio" name="slide" id="botao-menu">
+            <input type="radio" name="slide" id="botao-cancelar">
+            <ul class="navbar">
+                <label for="botao-cancelar" class="botao cancelar"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="desktop">Serviços</a>
+                    <input type="checkbox" id="mostrarDropdown">
+                    <label for="mostrarDropdown" class="mobile">Serviços</label>
+                    <div class="servicos-menu">
+                        <div class="conteudo">
+                            <div class="linha">
+                                <img src="imgs/photography.jpeg" alt="">
+                            </div>
+                            <div class="linha">
+                                <header>Designer</header>
+                                <ul class="links">
+                                    <li><a href="#">Design de aplicativos</a></li>
+                                    <li><a href="#">Arte para roupas</a></li>
+                                    <li><a href="#">Cartões de visita</a></li>
+                                    <li><a href="#">Customização de logos</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Fotografia</header>
+                                <ul class="links">
+                                    <li><a href="#">Casamentos</a></li>
+                                    <li><a href="#">Casal</a></li>
+                                    <li><a href="#">Aniversários</a></li>
+                                    <li><a href="#">Pessoal</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Programação</header>
+                                <ul class="links">
+                                    <li><a href="#">Cybersegurança</a></li>
+                                    <li><a href="#">Aplicativos</a></li>
+                                    <li><a href="#">Desenvolvimento Web</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="login_contratante.html">Quero contratar</a></li>
+                <li><a href="login_contratado.html">Quero ser um profissional</a></li>
+            </ul>
+            <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    
+    <section class="contactoPagina">
+        <div id="form">
+            <h2>Contacte-nos</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+            </p>
+        </div>
+    </section>
+    <script src="formulario.js"></script>
+</body>
+</html>

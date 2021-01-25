@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Contratou - Plataforma de contratação de serviços digitais</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><a href="">Contratou!</a></div>
+                <input type="radio" name="slide" id="botao-menu">
+                <input type="radio" name="slide" id="botao-cancelar">
+                <ul class="navbar">
+                    <label for="botao-cancelar" class="botao cancelar"><i class="fas fa-times"></i></label>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="desktop">Serviços</a>
+                        <input type="checkbox" id="mostrarDropdown">
+                        <label for="mostrarDropdown" class="mobile">Serviços</label>
+                        <div class="servicos-menu">
+                            <div class="conteudo">
+                                <div class="linha">
+                                    <img src="imgs/photography.jpeg" alt="">
+                                </div>
+                                <div class="linha">
+                                    <header>Designer</header>
+                                    <ul class="links">
+                                        <li><a href="#">Design de aplicativos</a></li>
+                                        <li><a href="#">Arte para roupas</a></li>
+                                        <li><a href="#">Cartões de visita</a></li>
+                                        <li><a href="#">Customização de logos</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="linha">
+                                    <header>Fotografia</header>
+                                    <ul class="links">
+                                        <li><a href="#">Casamentos</a></li>
+                                        <li><a href="#">Casal</a></li>
+                                        <li><a href="#">Aniversários</a></li>
+                                        <li><a href="#">Pessoal</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="linha">
+                                    <header>Programação</header>
+                                    <ul class="links">
+                                        <li><a href="#">Cybersegurança</a></li>
+                                        <li><a href="#">Aplicativos</a></li>
+                                        <li><a href="#">Desenvolvimento Web</a></li>
+                                        <li><a href="#">Mobile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="login_contratante.html">Quero contratar</a></li>
+                    <li><a href="login_contratado.html">Quero ser um profissional</a></li>
+                </ul>
+                <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+
+        <!--Carrossel usando JavaScript-->
+        <div class="conteudoCentral">
+            <div class="img-slider">
+                <div class="slide active">
+                <img src="imgs/foto1.png" alt="">
+                <div class="info">
+                    <p>Encontre profissionais à sua disposição.</p>
+                </div>
+                </div>
+                <div class="slide">
+                <img src="imgs/foto2.png" alt="">
+                <div class="info">
+                    <p>Desde designers a programadores.</p>
+                </div>
+                </div>
+                <div class="slide">
+                <img src="imgs/foto3.png" alt="">
+                <div class="info">
+                    <p>A melhor plataforma de contratação.</p>
+                </div>
+                </div>
+                <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                </div>
+            </div>
+
+            <div id="areaTextos">
+                <h1>Faça seu orçamento e receba em menos de 3h!</h1>
+                <br>
+                <small>Contrate os melhores profissionais na área de tecnologia e design.</small>
+                <br>
+                <br>
+                <a href="contacto.html" class="botao-contratar">Contratar</a>
+                <div id="form"></div>
+            </div>
+    </div>
+
+
+  <!-- Carrossel (slideshow)
+  <script src="slideshow.js"></script> -->
+  
+  <!--Fontawesome: para obter ícones-->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="formulario.js" type="text/babel"></script>
+  <script src="slideshow.js"></script>
+</body>
+</html>
