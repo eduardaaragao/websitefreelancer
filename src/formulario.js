@@ -1,8 +1,6 @@
 'use strict';
 
-const e = React.createElement;
-
-class FlavorForm extends React.Component {
+class Formulario extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: 'Selecione a categoria'};
@@ -21,36 +19,33 @@ class FlavorForm extends React.Component {
   }
 
   render() {
-    const style = {
-      color: "white",
-      backgroundColor: "DodgerBlue",
-      padding: "10px",
-      fontFamily: "Arial"
-    }
     return (
-      <form onSubmit={this.handleSubmit} style={style}>
-        <h2>Pedir Orçamento</h2>
+      <form onSubmit={this.handleSubmit} style={form}>
         <div>
-          <input class="inputbox" type="text" name="" required="required"/>
-            <span>Nome Completo</span>
+          <div>
+            <label for="fname">Nome</label>
+          </div>
+          <div>
+            <input type="text" id="nome" name="pnome" placeholder="Seu nome"/>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="categoria">Categoria</label>
+            </div>
+            <div class="col-75">
+              <select id="categoria" name="categoria">
+                <option value="designer">Designer</option>
+                <option value="ilustracao">Ilustração</option>
+                <option value="fotografia">Fotografia</option>
+                <option value="programacao">Programação</option>
+              </select>
+            </div>
         </div>
-        <div>
-          <input class="inputbox" type="text" name="" required="required"/>
-            <span>Descrição do serviço</span>
-        </div>
-        <select value={this.state.value} onChange={this.handleChange}>
-          <option value="designer">Ilustração</option>
-          <option value="designer">Designer</option>
-          <option value="fotografia">Fotografia</option>
-          <option value="programacao">Programação</option>
-        </select>
-        <span>Selecione a categoria do serviço</span>
-        <div class="inputbox">
-          <input type="submit" name="" value="Enviar"/>
         </div>
       </form>
     );
   }
 }
+
 const domContainer = document.querySelector('#form');
-ReactDOM.render(<FlavorForm></FlavorForm>, domContainer);
+ReactDOM.render(<Formulario></Formulario>, domContainer);

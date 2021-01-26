@@ -8,15 +8,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var e = React.createElement;
+var Formulario = function (_React$Component) {
+  _inherits(Formulario, _React$Component);
 
-var FlavorForm = function (_React$Component) {
-  _inherits(FlavorForm, _React$Component);
+  function Formulario(props) {
+    _classCallCheck(this, Formulario);
 
-  function FlavorForm(props) {
-    _classCallCheck(this, FlavorForm);
-
-    var _this = _possibleConstructorReturn(this, (FlavorForm.__proto__ || Object.getPrototypeOf(FlavorForm)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Formulario.__proto__ || Object.getPrototypeOf(Formulario)).call(this, props));
 
     _this.state = { value: 'Selecione a categoria' };
 
@@ -25,7 +23,7 @@ var FlavorForm = function (_React$Component) {
     return _this;
   }
 
-  _createClass(FlavorForm, [{
+  _createClass(Formulario, [{
     key: 'handleChange',
     value: function handleChange(event) {
       this.setState({ value: event.target.value });
@@ -39,80 +37,74 @@ var FlavorForm = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var style = {
-        color: "white",
-        backgroundColor: "DodgerBlue",
-        padding: "10px",
-        fontFamily: "Arial"
-      };
       return React.createElement(
         'form',
-        { onSubmit: this.handleSubmit, style: style },
-        React.createElement(
-          'h2',
-          null,
-          'Pedir Or\xE7amento'
-        ),
+        { onSubmit: this.handleSubmit, style: form },
         React.createElement(
           'div',
           null,
-          React.createElement('input', { 'class': 'inputbox', type: 'text', name: '', required: 'required' }),
           React.createElement(
-            'span',
+            'div',
             null,
-            'Nome Completo'
-          )
-        ),
-        React.createElement(
-          'div',
-          null,
-          React.createElement('input', { 'class': 'inputbox', type: 'text', name: '', required: 'required' }),
+            React.createElement(
+              'label',
+              { 'for': 'fname' },
+              'Nome'
+            )
+          ),
           React.createElement(
-            'span',
+            'div',
             null,
-            'Descri\xE7\xE3o do servi\xE7o'
+            React.createElement('input', { type: 'text', id: 'nome', name: 'pnome', placeholder: 'Seu nome' })
+          ),
+          React.createElement(
+            'div',
+            { 'class': 'row' },
+            React.createElement(
+              'div',
+              { 'class': 'col-25' },
+              React.createElement(
+                'label',
+                { 'for': 'categoria' },
+                'Categoria'
+              )
+            ),
+            React.createElement(
+              'div',
+              { 'class': 'col-75' },
+              React.createElement(
+                'select',
+                { id: 'categoria', name: 'categoria' },
+                React.createElement(
+                  'option',
+                  { value: 'designer' },
+                  'Designer'
+                ),
+                React.createElement(
+                  'option',
+                  { value: 'ilustracao' },
+                  'Ilustra\xE7\xE3o'
+                ),
+                React.createElement(
+                  'option',
+                  { value: 'fotografia' },
+                  'Fotografia'
+                ),
+                React.createElement(
+                  'option',
+                  { value: 'programacao' },
+                  'Programa\xE7\xE3o'
+                )
+              )
+            )
           )
-        ),
-        React.createElement(
-          'select',
-          { value: this.state.value, onChange: this.handleChange },
-          React.createElement(
-            'option',
-            { value: 'designer' },
-            'Ilustra\xE7\xE3o'
-          ),
-          React.createElement(
-            'option',
-            { value: 'designer' },
-            'Designer'
-          ),
-          React.createElement(
-            'option',
-            { value: 'fotografia' },
-            'Fotografia'
-          ),
-          React.createElement(
-            'option',
-            { value: 'programacao' },
-            'Programa\xE7\xE3o'
-          )
-        ),
-        React.createElement(
-          'span',
-          null,
-          'Selecione a categoria do servi\xE7o'
-        ),
-        React.createElement(
-          'div',
-          { 'class': 'inputbox' },
-          React.createElement('input', { type: 'submit', name: '', value: 'Enviar' })
         )
       );
     }
   }]);
 
-  return FlavorForm;
+  return Formulario;
 }(React.Component);
 
 var domContainer = document.querySelector('#form');
-ReactDOM.render(React.createElement(FlavorForm, null), domContainer);
+ReactDOM.render(React.createElement(Formulario, null), domContainer);
