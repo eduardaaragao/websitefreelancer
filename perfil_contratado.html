@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile Card Design</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="index.html">Contratou!</a></div>
+            <input type="radio" name="slide" id="botao-menu">
+            <input type="radio" name="slide" id="botao-cancelar">
+            <ul class="navbar">
+                <label for="botao-cancelar" class="botao cancelar"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="desktop">Serviços</a>
+                    <input type="checkbox" id="mostrarDropdown">
+                    <label for="mostrarDropdown" class="mobile">Serviços</label>
+                    <div class="servicos-menu">
+                        <div class="conteudo">
+                            <div class="linha">
+                                <img src="asset/imgs/photography.jpg" alt="">
+                            </div>
+                            <div class="linha">
+                                <header>Designer</header>
+                                <ul class="links">
+                                    <li><a href="#">Design de aplicativos</a></li>
+                                    <li><a href="#">Arte para roupas</a></li>
+                                    <li><a href="#">Cartões de visita</a></li>
+                                    <li><a href="#">Customização de logos</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Fotografia</header>
+                                <ul class="links">
+                                    <li><a href="#">Casamentos</a></li>
+                                    <li><a href="#">Casal</a></li>
+                                    <li><a href="#">Aniversários</a></li>
+                                    <li><a href="#">Pessoal</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Programação</header>
+                                <ul class="links">
+                                    <li><a href="#">Cybersegurança</a></li>
+                                    <li><a href="#">Aplicativos</a></li>
+                                    <li><a href="#">Desenvolvimento Web</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="quero-contratar.html">Quero contratar</a></li>
+                <li><a href="login_contratado.html">Quero ser um profissional</a></li>
+            </ul>
+            <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+<div class="conteudo">
+	<div class="profile_card">
+		<div class="back_btn">
+			<a href="quero-contratar.html"><i class="fas fa-long-arrow-alt-left"></i></a>
+		</div>
+	
+		<div class="profile_wrap">
+			<div class="profile_img">
+				<img src="asset/imgs/leonardo.jpg" alt="profile_pic">
+				<p class="name">Leonardo DiCaprio</p>
+				<p class="place">
+					<span class="icon">
+						<i class="fas fa-map-pin"></i>
+					</span>
+					<span class="place_name">Los Angeles</span>
+				</p>
+				<p class="place">
+					<span class="icon">
+						<i class="fas fa-user"></i>
+					</span>
+					<span class="place_name">Programador</span>
+				</p>
+			</div>
+
+			<div class="centralizar">
+				<div class="profile_icons">
+						<div class="icon"><i class="fas fa-star"></i></div>
+						<div class="icon"><i class="fas fa-star"></i></div>
+						<div class="icon"><i class="fas fa-star"></i></div>
+						<div class="icon"><i class="fas fa-star"></i></div>
+				</div>
+			</div>
+
+			<div class="centralizar">
+				<a href="contacto.html">
+				<button class="profile_btn">
+					Contatar
+				</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="price-comparison">
+	<div class="price-column">
+	  <div class="price-header">
+		<div class="price">
+		  <div class="dollar-sign">€</div>
+		  30
+		  <div class="per-month">/m</div>
+		</div>
+		<div class="plan-name">Básico</div>
+	  </div>
+	  <div class="divider"></div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		1 Página
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Customização de design
+	  </div>
+	  <div class="feature inactive">
+		<img src="asset/icons/x-square.svg">
+		Responsividade
+	  </div>
+	  <div class="feature inactive">
+		<img src="asset/icons/x-square.svg">
+		Funcionalidade E-Commerce
+	  </div>
+	  <div class="feature inactive">
+		<img src="asset/icons/x-square.svg">
+		Upload de conteúdo
+	  </div>
+	</div>
+	<div class="price-column">
+	  <div class="price-header">
+		<div class="price">
+		  <div class="dollar-sign">€</div>
+		  50
+		  <div class="per-month">/m</div>
+		</div>
+		<div class="plan-name">Standard</div>
+	  </div>
+	  <div class="divider"></div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		3 Páginas
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Customização de design
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Responsividade
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Funcionalidade E-Commerce
+	  </div>
+	  <div class="feature inactive">
+		<img src="asset/icons/x-square.svg">
+		Upload de conteúdo
+	  </div>
+	</div>
+	<div class="price-column">
+	  <div class="price-header">
+		<div class="price">
+		  <div class="dollar-sign">€</div>
+		  50
+		  <div class="per-month">/m</div>
+		</div>
+		<div class="plan-name">Premium</div>
+	  </div>
+	  <div class="divider"></div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		5 Páginas
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Customização de design
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Responsividade
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Funcionalidade E-Commerce
+	  </div>
+	  <div class="feature">
+		<img src="asset/icons/check-circle.svg">
+		Upload de conteúdo
+	  </div>
+	</div>
+</div>
+
+<div class="testimonials">
+	<div class="inner">
+	  <h1>O que dizem sobre Leonardo</h1>
+	  <div class="border"></div>
+
+	  <div class="row">
+		<div class="col">
+		  <div class="testimonial">
+			<img src="asset/imgs/p1.png" alt="">
+			<div class="name">João</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			</div>
+
+			<p>
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+
+		<div class="col">
+		  <div class="testimonial">
+			<img src="asset/imgs/p2.png" alt="">
+			<div class="name">Sandra</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			  <i class="far fa-star"></i>
+			</div>
+
+			<p>
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+
+		<div class="col">
+		  <div class="testimonial">
+			<img src="asset/imgs/p3.png" alt="">
+			<div class="name">Jaqueline</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			</div>
+
+			<p>
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <script src="date.js"></script>
+  <!--Inicio footer-->
+  <footer class="footer">
+	  
+	  <div id="date"></div>
+		  <!--Data e Hora Atual-->
+	  </div>
+	  
+	  <p>Todos direitos reservados de &copy;Contratou 2021</p>
+  </footer>
+</body>
+</html>
