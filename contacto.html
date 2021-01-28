@@ -8,6 +8,10 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body>
     <nav>
@@ -65,11 +69,43 @@
             <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
         </div>
     </nav>
-    
-    <section class="contactoPagina">
-        <div id="form">
+
+    <div class="containerForm">
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Faça um orçamento</h3>
+            <p class="text">
+              Realiza o orçamento do seu pedido e em até 3h receba propostas de mais de 5
+              profissionais capacitados para lhe atender!
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <img src="imgs/location.png" class="icon" alt="" />
+                <p>320 profissionais perto de você</p>
+              </div>
+              <div class="information">
+                <img src="imgs/email.png" class="icon" alt="" />
+                <p>A sua mensagem irá para o inbox de todos os profissionais da categoria que você escolher</p>
+              </div>
+              <div class="information">
+                <img src="imgs/phone.png" class="icon" alt="" />
+                <p>Profissionais te contatarão pelo temelóvel</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <div id="form"></div>
+          </div>
         </div>
-    </section>
+      </div>
     <script src="formulario.js"></script>
+    <scrip src="app.js"></scrip>
 </body>
 </html>

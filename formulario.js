@@ -16,89 +16,122 @@ var Formulario = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Formulario.__proto__ || Object.getPrototypeOf(Formulario)).call(this, props));
 
-    _this.state = { value: 'Selecione a categoria' };
+    _this.onChangeName = _this.onChangeName.bind(_this);
+    _this.onChangeEmail = _this.onChangeEmail.bind(_this);
+    _this.onChangeCategoria = _this.onChangeCategoria.bind(_this);
+    _this.onSubmit = _this.onSubmit.bind(_this);
 
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    _this.state = {
+      name: '',
+      email: '',
+      categoria: ''
+    };
     return _this;
   }
 
+  // Form Events
+
+
   _createClass(Formulario, [{
-    key: 'handleChange',
-    value: function handleChange(event) {
-      this.setState({ value: event.target.value });
+    key: 'onChangeName',
+    value: function onChangeName(e) {
+      this.setState({ name: e.target.value });
     }
   }, {
-    key: 'handleSubmit',
-    value: function handleSubmit(event) {
-      alert('Você acabou de solicitar o serviço: ' + this.state.value);
-      event.preventDefault();
+    key: 'onChangeEmail',
+    value: function onChangeEmail(e) {
+      this.setState({ email: e.target.value });
+    }
+  }, {
+    key: 'onChangeCategoria',
+    value: function onChangeCategoria(e) {
+      this.setState({ categoria: e.target.value });
+    }
+  }, {
+    key: 'onSubmit',
+    value: function onSubmit(e) {
+      e.preventDefault();
+
+      this.setState({
+        name: '',
+        email: '',
+        categoria: ''
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.userData = JSON.parse(localStorage.getItem('user'));
+
+      if (localStorage.getItem('user')) {
+        this.setState({
+          name: this.userData.name,
+          email: this.userData.email,
+          categoria: this.userData.categoria
+        });
+      } else {
+        this.setState({
+          name: '',
+          email: '',
+          categoria: ''
+        });
+      }
+    }
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate(nextProps, nextState) {
+      localStorage.setItem('user', JSON.stringify(nextState));
     }
   }, {
     key: 'render',
     value: function render() {
       return React.createElement(
         'form',
-        { onSubmit: this.handleSubmit, style: form },
+        { action: 'index.html', autocomplete: 'off' },
+        React.createElement(
+          'h3',
+          { 'class': 'title' },
+          'Mensagem'
+        ),
         React.createElement(
           'div',
-          null,
+          { 'class': 'input-container' },
+          React.createElement('input', { required: true, value: this.state.name, onChange: this.onChangeName, placeholder: 'Digite seu nome', type: 'text', name: 'name', 'class': 'input' })
+        ),
+        React.createElement(
+          'div',
+          { 'class': 'input-container' },
+          React.createElement('input', { required: true, value: this.state.email, onChange: this.onChangeEmail, placeholder: 'Digite seu email', type: 'email', name: 'email', 'class': 'input' })
+        ),
+        React.createElement(
+          'div',
+          { 'class': 'input-container' },
           React.createElement(
-            'div',
-            null,
+            'select',
+            { id: 'categoria', name: 'categoria', value: this.state.categoria, onChange: this.onChangeCategoria },
             React.createElement(
-              'label',
-              { 'for': 'fname' },
-              'Nome'
-            )
-          ),
-          React.createElement(
-            'div',
-            null,
-            React.createElement('input', { type: 'text', id: 'nome', name: 'pnome', placeholder: 'Seu nome' })
-          ),
-          React.createElement(
-            'div',
-            { 'class': 'row' },
-            React.createElement(
-              'div',
-              { 'class': 'col-25' },
-              React.createElement(
-                'label',
-                { 'for': 'categoria' },
-                'Categoria'
-              )
+              'option',
+              null,
+              'Programa\xE7\xE3o'
             ),
             React.createElement(
-              'div',
-              { 'class': 'col-75' },
-              React.createElement(
-                'select',
-                { id: 'categoria', name: 'categoria' },
-                React.createElement(
-                  'option',
-                  { value: 'designer' },
-                  'Designer'
-                ),
-                React.createElement(
-                  'option',
-                  { value: 'ilustracao' },
-                  'Ilustra\xE7\xE3o'
-                ),
-                React.createElement(
-                  'option',
-                  { value: 'fotografia' },
-                  'Fotografia'
-                ),
-                React.createElement(
-                  'option',
-                  { value: 'programacao' },
-                  'Programa\xE7\xE3o'
-                )
-              )
+              'option',
+              null,
+              'Fotografia'
+            ),
+            React.createElement(
+              'option',
+              null,
+              'Design'
             )
           )
-        )
+        ),
+        React.createElement(
+          'div',
+          { 'class': 'input-container textarea' },
+          React.createElement('textarea', { placeholder: 'Descri\xE7\xE3o do projeto', name: 'message', 'class': 'input' })
+        ),
+        React.createElement('input', { type: 'submit', value: 'Enviar', 'class': 'btn' })
       );
     }
   }]);

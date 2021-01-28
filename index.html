@@ -14,7 +14,7 @@
 <body>
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="">Contratou!</a></div>
+            <div class="logo"><a href="index.html">Contratou!</a></div>
             <input type="radio" name="slide" id="botao-menu">
             <input type="radio" name="slide" id="botao-cancelar">
             <ul class="navbar">
@@ -90,9 +90,9 @@
                 </div>
             </div>
             <div class="navigation">
-                <div class="btn active"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
+                <div class="botaoslider active"></div>
+                <div class="botaoslider"></div>
+                <div class="botaoslider"></div>
             </div>
         </div>
 
@@ -123,6 +123,7 @@
                 </div>
             </div>
             <!--Fim image-->
+
             <!--image -->
             <div class="image">
                 <img src="imgs/card-fotografia.jpg" style="width: 100%;">
@@ -212,8 +213,6 @@
     </footer>
     <!--Fim footer-->
 
-
-
     <!-- Carrossel (slideshow)
   <script src="slideshow.js"></script> -->
 
@@ -221,6 +220,20 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="formulario.js" type="text/babel"></script>
     <script src="slideshow.js"></script>
-</body>
 
+    <script>
+       window.addEventListener('click', function(){
+            var cancelar = document.getElementById("botao-cancelar");
+            var botao = document.getElementById("botao-menu");
+            var menu = document.getElementsByClassName("navbar");
+            if (botao.checked){
+                menu[0].style.left = "0%";
+            }
+            if (cancelar.checked)
+            {
+                menu[0].style.left = "-100%";
+            }
+        })
+    </script>
+</body>
 </html>
