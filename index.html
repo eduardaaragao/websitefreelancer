@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="login_contratante.html">Quero contratar</a></li>
+                <li><a href="quero-contratar.html">Quero contratar</a></li>
                 <li><a href="login_contratado.html">Quero ser um profissional</a></li>
             </ul>
             <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
@@ -107,108 +107,19 @@
         </div>
     </div>
 
-    <!--Inicio do container de categorias-->
-    <div class="container">
-        <!-- Inicio row-->
-        <div class="row">
-            <!--image -->
-            <div class="image">
-                <img src="imgs/card-editor.jpg" style="width: 100%;">
-                <div class="details">
-                    <h2>Designer</h2>
-                    <p>Designer de aplicações</p>
-                    <p>Arte para roupas</p>
-                    <p>Cartões de visita</p>
-                    <p>Customização de logos</p>
-                </div>
-            </div>
-            <!--Fim image-->
-            <!--image -->
-            <div class="image">
-                <img src="imgs/card-fotografia.jpg" style="width: 100%;">
-                <div class="details">
-                    <h2>Fotografia</h2>
-                    <p>Casamentos</p>
-                    <p>Casal</p>
-                    <p>Aniversário</p>
-                    <p>Família</p>
-                    <p>Pessoal</p>
-                </div>
-            </div>
-            <!--Fim image-->
-            <!--image -->
-            <div class="image">
-                <img src="imgs/card-programacao.jpg" style="width: 100%;">
-                <div class="details">
-                    <h2>Programação</h2>
-                    <p>CyberSegurança</p>
-                    <p>Desenvolvimento Web</p>
-                    <p>Mobile</p>
-                </div>
-            </div>
-            <!--Fim image-->
-            <!--image -->
-            <div class="image">
-                <img src="imgs/card-programacao.jpg" style="width: 100%;">
-                <div class="details">
-                    <h2>Programação</h2>
-                    <p>CyberSegurança</p>
-                    <p>Desenvolvimento Web</p>
-                    <p>Mobile</p>
-                </div>
-            </div>
-            <!--Fim image-->
-        </div>
-        <!--Fim row-->
+    <div style="background: white; width: 100%; height: 100px;">
+        
     </div>
-    <!--Fim do container de categorias-->
 
-
+    <script src="date.js"></script>
     <!--Inicio footer-->
     <footer class="footer">
-
-        <div class="footer-left">
-            <h1>Contratou!</h1><br>
-            <p>Contrate os melhores profissionais na área de tecnologia e design.</p><br>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        </div>
-
-        <div class="footer-rigth">
-            <h2>Links Uteis</h2>
-            <ul class="links-footer">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Quero Contratar</a></li>
-                <li><a href="#">Quero Ser Contratado</a></li>
-            </ul>
-
-            <div id="date"></div>
+        
+        <div id="date"></div>
             <!--Data e Hora Atual-->
-            <script>
-                // Função formata n em 0n
-                const zeroFill = n => {
-                    return ('0' + n).slice(-2);
-                }
-
-                const interval = setInterval(() => {
-                    //Pega o horário atual
-                    const now = new Date();
-
-                    //Formate a data em dd/mm/aaaa e hh/mm/ss
-                    const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
-                    document.getElementById('date').innerHTML = dataHora;
-                }, 1000);
-
-            </script>
         </div>
-
-        <div class="footer-bottom">
-            <p>Todos direitos reservados de &copy;Contratou 2021</p>
-        </div>
+        
+        <p>Todos direitos reservados de &copy;Contratou 2021</p>
     </footer>
     <!--Fim footer-->
 

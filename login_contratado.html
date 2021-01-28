@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contratou - Plataforma de contratação de serviços digitais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="">Contratou!</a></div>
+            <input type="radio" name="slide" id="botao-menu">
+            <input type="radio" name="slide" id="botao-cancelar">
+            <ul class="navbar">
+                <label for="botao-cancelar" class="botao cancelar"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="desktop">Serviços</a>
+                    <input type="checkbox" id="mostrarDropdown">
+                    <label for="mostrarDropdown" class="mobile">Serviços</label>
+                    <div class="servicos-menu">
+                        <div class="conteudo">
+                            <div class="linha">
+                                <img src="imgs/photography.jpeg" alt="">
+                            </div>
+                            <div class="linha">
+                                <header>Designer</header>
+                                <ul class="links">
+                                    <li><a href="#">Design de aplicativos</a></li>
+                                    <li><a href="#">Arte para roupas</a></li>
+                                    <li><a href="#">Cartões de visita</a></li>
+                                    <li><a href="#">Customização de logos</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Fotografia</header>
+                                <ul class="links">
+                                    <li><a href="#">Casamentos</a></li>
+                                    <li><a href="#">Casal</a></li>
+                                    <li><a href="#">Aniversários</a></li>
+                                    <li><a href="#">Pessoal</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="linha">
+                                <header>Programação</header>
+                                <ul class="links">
+                                    <li><a href="#">Cybersegurança</a></li>
+                                    <li><a href="#">Aplicativos</a></li>
+                                    <li><a href="#">Desenvolvimento Web</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="quero-contratar.html">Quero contratar</a></li>
+                <li><a href="login_contratado.html">Quero ser um profissional</a></li>
+            </ul>
+            <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    <section class="section">
+     <div class="imgBX">
+       <img src="imgs/login.png">
+     </div>
+     <div class="contentBX">
+         <div class="formBX">
+            <h2>Login</h2>
+            <form>
+                <div class="inputBX">
+                    <span>Email</span>
+                    <input type="email">
+                </div>
+                <div class="inputBX">
+                    <span>Password</span>
+                    <input type="password">
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox">Lembar de mim</label>
+                </div>
+                <div class="inputBX">
+                    <input type="submit" value="Entrar">
+                </div>
+                <div class="inputBX">
+                    <p>Não tem uma conta?<a href="cadastro_contratado.html">Cadastrar</a></p>
+                </div>
+            </form>
+            <h3>Login com midias sociais</h3>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+         </div>
+     </div>
+    </section>
+
+    <script src="date.js"></script>
+    <!--Inicio footer-->
+    <footer class="footer">
+        
+        <div id="date"></div>
+            <!--Data e Hora Atual-->
+        </div>
+        
+        <p>Todos direitos reservados de &copy;Contratou 2021</p>
+    </footer>
+    <!--Fim footer-->
+    <!--Fontawesome: para obter ícones-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+</body>
+
+</html>
